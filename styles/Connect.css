@@ -11,31 +11,61 @@
 }
 
 .text:nth-child(5n + 1) {
-  stroke: #8f38f2bb;
+  stroke: oklch(
+      /* decrease lightness as list grows */
+      calc(75% - (0 * 5%))
+      /* decrease chroma as list grows */
+      calc(.2 - (0 * .01))
+      /* lightly rotate the hue as the list grows */
+      calc(var(--hue) - (0 + 5)));
   -webkit-animation-delay: -1.2s;
   animation-delay: -1.2s;
 }
 
 .text:nth-child(5n + 2) {
-  stroke: #d278ee;
+  stroke: oklch(
+      /* decrease lightness as list grows */
+      calc(75% - (1 * 5%))
+      /* decrease chroma as list grows */
+      calc(.2 - (1 * .01))
+      /* lightly rotate the hue as the list grows */
+      calc(var(--hue) - (1 + 5)));
   -webkit-animation-delay: -2.4s;
   animation-delay: -2.4s;
 }
 
 .text:nth-child(5n + 3) {
-  stroke: #a97ef4;
+  stroke: oklch(
+      /* decrease lightness as list grows */
+      calc(75% - (2 * 5%))
+      /* decrease chroma as list grows */
+      calc(.2 - (2 * .01))
+      /* lightly rotate the hue as the list grows */
+      calc(var(--hue) - (2 + 5)));
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
 
 .text:nth-child(5n + 4) {
-  stroke: #7530f7;
+  stroke: oklch(
+      /* decrease lightness as list grows */
+      calc(75% - (3 * 5%))
+      /* decrease chroma as list grows */
+      calc(.2 - (3 * .01))
+      /* lightly rotate the hue as the list grows */
+      calc(var(--hue) - (3 + 5)));
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
 
 .text:nth-child(5n + 5) {
-  stroke: #783abf;
+  stroke: oklch(
+      /* decrease lightness as list grows */
+      calc(75% - (4 * 5%))
+      /* decrease chroma as list grows */
+      calc(.2 - (4 * .01))
+      /* lightly rotate the hue as the list grows */
+      calc(var(--hue) - (4 + 5)));
   -webkit-animation-delay: -6s;
   animation-delay: -6s;
 }
@@ -81,7 +111,7 @@ footer {
   line-height: 1.45;
   font-size: 16px;
   color: #2c2c2cd5;
-  background: white url("../Resources/ConnectBG.gif") center;
+  background: linear-gradient(125deg, var(--primary), var(--primaryOther));
   background-size: cover;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 

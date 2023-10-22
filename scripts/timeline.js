@@ -61,11 +61,11 @@
         if ((agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight) {
 
           if ($(this).children().first().children().first().children().first().hasClass("ag-timeline-card_meta")) {
-            $(this).children().first().children().first().children().first().parent().next().children().first().css("border", "3px solid #a97ef4")
-            $(this).children().first().children().first().children().first().css("color", "#a97ef4")
+            $(this).children().first().children().first().children().first().parent().next().children().first().css("border", "3px solid var(--primary)")
+            $(this).children().first().children().first().children().first().css("color", "var(--primary)")
           } else {
-            $(this).children().first().children().first().children().first().css("border", "3px solid #a97ef4")
-            $(this).children().first().children().first().children().first().parent().next().css("color", "#a97ef4")
+            $(this).children().first().children().first().children().first().css("border", "3px solid var(--primary)")
+            $(this).children().first().children().first().children().first().parent().next().css("color", "var(--primary)")
           }
           $(this).addClass('js-ag-active')
         } else {
