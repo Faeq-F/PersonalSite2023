@@ -354,11 +354,10 @@ body:has(.switch__input:checked) #themeDiv #themeSlider {
   content: '';
   position: absolute;
   border-radius: inherit;
-  width: 6.5%;
-  height: 76%;
+  width: 5.6%;
+  height: 27%;
   background-image: linear-gradient(to bottom, #e4e2e2, #f0f0f2);
-  top: 3px;
-  left: calc(var(--hue)*0.1%);
+  left: calc(var(--hue)*0.1% + 1px);
   box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
     inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
 }
@@ -368,25 +367,12 @@ body:has(.switch__input:checked) #themeDiv #themeSlider {
   position: absolute;
   border-radius: inherit;
   width: 1.5%;
-  height: 20%;
+  height: 7%;
   background: var(--primary-highlight);
-  top: 8.5px;
+  top: 34.5px;
   left: calc(var(--hue)*0.108%);
 }
 
 body:has(.switch__input:checked) #themeDiv #themeSlider::before {
   background-image: linear-gradient(to bottom, #6b6b6b, #0f0f0d);
-}
-
-
-@media(max-width: 661px) {
-  #themeSlider::before {
-    width: 6.5%;
-    height: 75%;
-  }
-
-  #themeSlider::after {
-    height: 20%;
-    width: 1%;
-  }
 }
