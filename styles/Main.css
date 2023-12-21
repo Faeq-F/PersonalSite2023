@@ -334,6 +334,7 @@ input:checked[type="checkbox"]:after {
 
 #themeSlider {
   -webkit-appearance: none;
+  -moz-appearance: none;
   background: linear-gradient(0deg, var(--threes), var(--zeros));
   outline: none;
   border-radius: 20px;
@@ -350,29 +351,26 @@ body:has(.switch__input:checked) #themeDiv #themeSlider {
     inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
 }
 
-#themeSlider::before {
-  content: '';
-  position: absolute;
-  border-radius: inherit;
-  width: 5.6%;
-  height: 27%;
-  background-image: linear-gradient(to bottom, #e4e2e2, #f0f0f2);
-  left: calc(var(--hue)*0.1% + 1px);
-  box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
-    inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
-}
+/* Fix styles in gecko (firefox) -based browsers (content not allowed for input) */
+#themeSlider::-moz-range-thumb{
+    border-radius: 360px;
+    height: 130%;
+    width: 13%;
+    background-image: linear-gradient(to bottom, #e4e2e2, #f0f0f2);
+    left: calc(var(--hue)*0.1% + 1px);
+    box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
+      inset 0 0 90px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+  }
+#themeSlider::-webkit-slider-thumb{
+    border-radius: 360px;
+    width: 5.6%;
+    height: 27%;
+    background-image: linear-gradient(to bottom, #e4e2e2, #f0f0f2);
+    left: calc(var(--hue)*0.1% + 1px);
+    box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
+      inset 0 0 90px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+  }
 
-#themeSlider::after {
-  content: '';
-  position: absolute;
-  border-radius: inherit;
-  width: 1.5%;
-  height: 7%;
-  background: var(--primary-highlight);
-  top: 34.5px;
-  left: calc(var(--hue)*0.108%);
-}
-
-body:has(.switch__input:checked) #themeDiv #themeSlider::before {
+body:has(.switch__input:checked) #themeDiv #themeSlider:before {
   background-image: linear-gradient(to bottom, #6b6b6b, #0f0f0d);
 }

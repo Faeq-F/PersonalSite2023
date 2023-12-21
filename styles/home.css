@@ -34,7 +34,7 @@
 .gradient {
     top: 25%;
     position: absolute;
-    left: 50%;
+    left: 57%;
     z-index: 3;
     --size: 250px;
     --speed: 10s;
