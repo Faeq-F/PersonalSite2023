@@ -93,5 +93,5 @@ var typed = new Typed(".auto-type", {
   fadeOutDelay: 500,
   loop: true,
   loopCount: Infinity,
+  shuffle: true,
 })
-//shuffle: true,

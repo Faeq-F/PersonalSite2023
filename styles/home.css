@@ -53,19 +53,69 @@
     }
 }
 
-
-
-#codeContainer {
-    top: 25%;
+#IDE {
+    top: 20%;
     position: absolute;
-    left: 55%;
+    left: 50%;
     z-index: 3;
+    box-shadow: rgba(255,255,255,0.1) 5px 5px 5px -1px,
+        rgba(0, 0, 0, 0.3) 5px 5px 5px -5px;
+    border-radius: 15px;
 }
 
+#IDEmenu {
+    width: 45vw;
+    height: 2vh;
+    background: rgba(255, 255, 255, 0.4);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#IDEmenu::after,
+#IDEbody::before,
+#IDEmenu::before {
+    content: "\25C9";
+    padding: 5px;
+    color: #696969a3;
+    left: 3.3vw;
+    position: absolute;
+}
+
+#IDEmenu::before {
+    left: 2vw;
+}
+
+#IDEbody::before {
+    left: 0.7vw;
+    top: -0.01vh;
+}
+
+#IDEbody {
+    width: 45vw;
+    height: 60vh;
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+#IDEtype {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+#codeContainer {
+ overflow: hidden;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
 #code {
-    color: #e9e9e9;
+    color: var(--primary);
     font-weight: lighter;
     font-size: medium;
+    opacity: 0.5;
+    font-family: 'Cascadia Code', sans-serif;
 }
 
 @media screen and (max-width: 1000px) {
