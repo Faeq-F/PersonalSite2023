@@ -18,8 +18,6 @@
   <link href="https://cdn.jsdelivr.net/npm/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/nanogallery2/dist/jquery.nanogallery2.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow+Condensed:400,400i,700,700i"
-    rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/Main.css">
@@ -63,18 +61,18 @@
           </a></li>
         <li class="right-li headerLink connectButton">
           <a href="#bottom">
-            <svg viewBox="0 0 700 300">
-              <!-- Symbol-->
-              <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="50%" dy="0em">Let's Connect</text>
-              </symbol>
-              <!-- Duplicate symbols-->
-              <use class="text" xlink:href="#s-text"></use>
-              <use class="text" xlink:href="#s-text"></use>
-              <use class="text" xlink:href="#s-text"></use>
-              <use class="text" xlink:href="#s-text"></use>
-              <use class="text" xlink:href="#s-text"></use>
-            </svg>
+            <button id="LetsConnectButton" class="ready" onclick="clickButton();">
+
+              <div class="message submitMessage">
+                <span class="button-text">Let's Connect</span>
+              </div>
+
+              <div class="message successMessage">
+                <span class="button-text">Contact me!</span>
+              </div>
+            </button>
+
+            <canvas id="canvas"></canvas>
           </a>
         </li>
       </ul>
@@ -108,7 +106,7 @@
       <div id="IDEbody">
         <div id="IDEtype">
           <div id="codeContainer">
-            <h1 id="code"><span class="auto-type"></span></h1>
+            <h1 id="code"><span class="auto-type" style="font-family: 'Cascadia Code Regular';"></span></h1>
           </div>
         </div>
       </div>

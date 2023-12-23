@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Cascadia Code Regular";
+    src: url("../Resources/CascadiaCode-Regular.woff2") format('woff2');
+}
+
 #HomeView {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -36,7 +41,7 @@
     position: absolute;
     left: 57%;
     z-index: 3;
-    --size: 250px;
+    --size: 35vw;
     --speed: 10s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
     width: var(--size);
@@ -47,19 +52,12 @@
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
-@media screen and (min-width: 1001px) {
-    .gradient {
-        --size: 500px;
-    }
-}
-
 #IDE {
     top: 20%;
     position: absolute;
     left: 50%;
     z-index: 3;
-    box-shadow: rgba(255,255,255,0.1) 5px 5px 5px -1px,
-        rgba(0, 0, 0, 0.3) 5px 5px 5px -5px;
+    box-shadow: rgba(255, 255, 255, 0.1) 5px 5px 5px -1px, rgba(0, 0, 0, 0.3) 5px 5px 5px -5px;
     border-radius: 15px;
 }
 
@@ -93,7 +91,7 @@
 #IDEbody {
     width: 45vw;
     height: 60vh;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.7);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 
@@ -105,20 +103,18 @@
 }
 
 #codeContainer {
- overflow: hidden;
+    overflow: hidden;
 }
-
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
 
 #code {
     color: var(--primary);
-    font-weight: lighter;
+    font-weight: normal;
     font-size: medium;
     opacity: 0.5;
-    font-family: 'Cascadia Code', sans-serif;
+    font-family: "Cascadia Code Regular";
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and(max-width: 1000px) {
     .gradient {
         visibility: hidden;
     }

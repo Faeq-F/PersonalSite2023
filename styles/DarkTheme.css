@@ -9,6 +9,7 @@ body:has(.switch__input:checked) header.sticky {
     rgba(60, 60, 60, 0.35) 0px -2px 6px 0px inset
 }
 
+body:has(.switch__input:checked) #LetsConnectButton,
 body:has(.switch__input:checked) #header>nav>ul>li>a>span {
   color: #ddd;
 }
@@ -118,21 +119,21 @@ body:has(.switch__input:checked) #Contact .ContactCard .SocialButtons .SocialBtn
 
 
 
-body:has(.switch__input:checked) #IDE{
-    box-shadow: rgba(50, 50, 93, 0.25) 5px 5px 5px -1px,
-        rgba(0, 0, 0, 0.3) 5px 5px 5px -5px;
+body:has(.switch__input:checked) #IDE {
+  box-shadow: rgba(50, 50, 93, 0.25) 5px 5px 5px -1px,
+    rgba(0, 0, 0, 0.3) 5px 5px 5px -5px;
 }
 
 body:has(.switch__input:checked) #IDEmenu {
-    background: rgba(2, 2, 2, 0.6);
+  background: rgba(2, 2, 2, 0.6);
 }
 
 body:has(.switch__input:checked) #IDEmenu::after,
 body:has(.switch__input:checked) #IDEbody::before,
 body:has(.switch__input:checked) #IDEmenu::before {
-    color: #696969a3;
+  color: #696969a3;
 }
 
 body:has(.switch__input:checked) #IDEbody {
-    background: rgba(9, 9, 9, 0.8);
+  background: rgba(9, 9, 9, 0.8);
 }

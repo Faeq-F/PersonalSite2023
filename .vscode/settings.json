@@ -6,5 +6,7 @@
     "Photoshop",
     "UCAS",
     "WBFS"
-  ]
+  ],
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false
 }

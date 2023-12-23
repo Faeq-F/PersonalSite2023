@@ -50,8 +50,7 @@ nav {
 .connectButton {
   margin-left: auto;
   font-size: larger;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  align-self: center;
 }
 
 
@@ -136,7 +135,7 @@ header.sticky {
   }
 }
 
-/* progress bar 
+/* progress bar
 
 .progress-container {
     width: 95%;
