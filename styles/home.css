@@ -114,13 +114,13 @@
     font-family: "Cascadia Code Regular";
 }
 
-@media screen and(max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .gradient {
-        visibility: hidden;
+        visibility: hidden !important;
     }
 
-    #code {
-        visibility: hidden;
+    #IDE {
+        visibility: hidden !important;
     }
 }
 
