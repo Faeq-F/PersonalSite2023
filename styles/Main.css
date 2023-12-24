@@ -3,6 +3,28 @@ html {
   font-family: sans-serif;
 }
 
+/* Scrolling generally with lenis */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /*Concerning overflow-x: hidden, it is minimal and does not cause issues at the moment*/
 body {
   background: #f2f4f8;

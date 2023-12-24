@@ -14,6 +14,8 @@
   <meta name="description" content="Faeq's Personal Website">
   <link rel="icon" type="image/x-icon" href="../Resources/circle-cropped-profile-image.png">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--Scroll library-->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   <!-- nanogallery2 -->
   <link href="https://cdn.jsdelivr.net/npm/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript"
@@ -47,20 +49,20 @@
   <header id="header" class="hidemee">
     <nav>
       <ul class="navbar">
-        <li class="headerLink"><a href="#top">
+        <li class="headerLink"><a href="#top" onclick="lenis.scrollTo('#top')">
             <span class="headerText">Home</span>
           </a></li>
-        <li class="headerLink"><a href="#About">
+        <li class="headerLink"><a href="#About" onclick="lenis.scrollTo('#About')">
             <span class="headerText">About</span>
           </a></li>
-        <li class="headerLink"><a href="#Portfolio">
+        <li class="headerLink"><a href="#Portfolio" onclick="lenis.scrollTo('#Portfolio')">
             <span class="headerText">Portfolio</span>
           </a></li>
-        <li class="headerLink"><a href="#Timeline">
+        <li class="headerLink"><a href="#Timeline" onclick="lenis.scrollTo('#Timeline')">
             <span class="headerText">Experience</span>
           </a></li>
         <li class="right-li headerLink connectButton">
-          <a href="#bottom">
+          <a href="#bottom" onclick="lenis.scrollTo('#bottom')">
             <button id="LetsConnectButton" class="ready" onclick="clickButton();">
 
               <div class="message submitMessage">
@@ -89,7 +91,7 @@
         </a>
       </span>
       <span style="display: inline-block;">
-        <a href="#Portfolio">
+        <a href="#Portfolio" onclick="lenis.scrollTo('#Portfolio')">
           <button class="button-64" role="button"><span class="text">See projects</span></button>
         </a>
       </span><br>
@@ -122,7 +124,8 @@
       <p>
         I am a, mostly self-taught, software engineer who is always working on a variety of projects, some of which are
         open to
-        the public. These are included in the <a href="#Portfolio">portfolio</a> below. I work with a diverse set of
+        the public. These are included in the <a href="#Portfolio" onclick="lenis.scrollTo('#Portfolio')">portfolio</a>
+        below. I work with a diverse set of
         technologies, from <a href="https://nodejs.org/en">Node.js</a>, <a
           href="https://www.electronjs.org">Electron</a> and <a href="https://react.dev">React</a>, all the way to
         <a href="https://opencv.org">OpenCV</a>, <a href="https://dotnet.microsoft.com/en-us/">.NET</a>
@@ -447,7 +450,7 @@
         </div>
         <div class="card" data-aos="fade-up-right">
           <p class="PortfolioWorkHeader" style="font-size: 1.17em;">The certifications I have earned:</p>
-          <div id="PortfolioGrid">
+          <div id="PortfolioGrid" data-lenis-prevent>
             <input type="checkbox" class="modal-launcher" id="img-0">
             <input type="checkbox" class="modal-launcher" id="img-1">
             <input type="checkbox" class="modal-launcher" id="img-2">
@@ -738,7 +741,7 @@
                         (also known as single science or
                         separate sciences).
                         My certificates can be found in the
-                        <a href="#Portfolio">portfolio</a> above.
+                        <a href="#Portfolio" onclick="lenis.scrollTo('#Portfolio')">portfolio</a> above.
                       </div>
                     </div>
                   </div>
@@ -776,7 +779,7 @@
                         and <a
                           href="https://www.ocr.org.uk/qualifications/as-and-a-level/physics-a-h156-h556-from-2015/">Physics</a>.
                         My certificates can be found in the
-                        <a href="#Portfolio">portfolio</a> above.
+                        <a href="#Portfolio" onclick="lenis.scrollTo('#Portfolio')">portfolio</a> above.
                       </div>
                     </div>
                   </div>
