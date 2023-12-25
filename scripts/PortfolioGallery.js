@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 
   jQuery("#CertificationsGallery").nanogallery2({
 
-    // ### gallery settings ### 
+    // ### gallery settings ###
 
 
     itemsBaseURL: '../Resources/PortfolioCertifications/',
@@ -66,7 +66,7 @@ jQuery(document).ready(function () {
       navigationFilter: { background: '#ffffff', backgroundSelected: '#a97ef4', color: '#fff' }
     },
 
-    // ### gallery content ### 
+    // ### gallery content ###
     items: [
       { src: 'FaeqFaisal-mimo-certificates-make_a_website.png', srct: 'FaeqFaisal-mimo-certificates-make_a_website.png', title: 'Mimo - Make a website' },
       { src: 'FaeqFaisal-mimo-certificates-web_development.png', srct: 'FaeqFaisal-mimo-certificates-web_development.png', title: 'Mimo - Web Development' },
@@ -88,28 +88,31 @@ jQuery(document).ready(function () {
 
 // new grid:
 
-const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+const vw = Math.max(
+  document.documentElement.clientWidth || 0,
+  window.innerWidth || 0
+);
 
-var $window = $('.modal-window');
-var $overlay = $('.modal-overlay');
+var $window = $(".modal-window");
+var $overlay = $(".modal-overlay");
 
 images = document.getElementsByClassName("modal-launcher");
 function exitImageView() {
   for (i in images) images[i].checked = false;
-  if (vw > 660) $('header').css('display', 'block');
-  $window.removeClass('fadeIn');
-  $overlay.removeClass('fadeIn');
-  $window.addClass('fadeOut');
-  $overlay.addClass('fadeOut');
+  if (vw > 660) $("header").css("display", "block");
+  $window.removeClass("fadeIn");
+  $overlay.removeClass("fadeIn");
+  $window.addClass("fadeOut");
+  $overlay.addClass("fadeOut");
 }
 
 $($window).click(exitImageView);
 $($overlay).click(exitImageView);
 
-$('.modal-launcher').click(function () {
-  if (vw > 660) $('header').css('display', 'none');
-  $window.removeClass('fadeOut');
-  $overlay.removeClass('fadeOut');
-  $window.addClass('fadeIn');
-  $overlay.addClass('fadeIn');
-})
+$(".modal-launcher").click(function () {
+  if (vw > 660) $("header").css("display", "none");
+  $window.removeClass("fadeOut");
+  $overlay.removeClass("fadeOut");
+  $window.addClass("fadeIn");
+  $overlay.addClass("fadeIn");
+});

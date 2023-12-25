@@ -56,7 +56,8 @@ var typed = new Typed(".auto-type", {
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
     }<br>
-    `, `
+    `,
+    `
     // traversal using pointers in 2D array<br>
     #include &lt;stdio.h&gt;<br>
     <br>
@@ -79,19 +80,19 @@ var typed = new Typed(".auto-type", {
 	&nbsp;&nbsp;&nbsp;&nbsp;traverseArr((int*)arr, N, M);<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
     }
-    `
+    `,
   ],
   startDelay: 500,
   typeSpeed: 30,
   backSpeed: 20,
-  cursorChar: '\u005f',
+  cursorChar: "\u005f",
   autoInsertCss: true,
   smartBackspace: true,
   backDelay: 1000,
   fadeOut: true,
-  fadeOutClass: 'typed-fade-out',
+  fadeOutClass: "typed-fade-out",
   fadeOutDelay: 500,
   loop: true,
   loopCount: Infinity,
   shuffle: true,
-})
+});

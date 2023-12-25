@@ -46,6 +46,11 @@ body:has(.switch__input:checked) #Portfolio section div #PortfolioGrid {
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
+/* Used for fixing light theme when fixed timeleine animation in dark theme */
+body:has(.switch__input) #Timeline>div>section>div>div>div.ag-timeline_list>div.js-timeline_item.ag-timeline_item.js-ag-active>div.ag-timeline-card_item {
+  background-color: #fff;
+}
+
 body:has(.switch__input:checked) #Timeline>div>section>div>div>div.ag-timeline_list>div.js-timeline_item.ag-timeline_item.js-ag-active>div.ag-timeline-card_item {
   background-color: #1a1a1a;
 }
@@ -60,6 +65,11 @@ body:has(.switch__input:checked) #Timeline>div>section>div>div>div.ag-timeline_l
 
 body:has(.switch__input:checked) #Timeline>div>section>div>div>div.ag-timeline_list>div.js-timeline_item.ag-timeline_item.js-ag-active>div.ag-timeline-card_box>div.js-timeline-card_point-box.ag-timeline-card_point-box>div.mobileAge {
   color: #a97ef4;
+}
+
+/* Used for fixing light theme when fixed timeleine animation in dark theme */
+body:has(.switch__input) #Timeline>div>section>div>div>div.ag-timeline_list>div.js-timeline_item.ag-timeline_item.js-ag-active>div.ag-timeline-card_item div.ag-timeline-card_arrow {
+  background-color: #fff;
 }
 
 body:has(.switch__input:checked) #Timeline>div>section>div>div>div.ag-timeline_list>div.js-timeline_item.ag-timeline_item.js-ag-active>div.ag-timeline-card_item div.ag-timeline-card_arrow {

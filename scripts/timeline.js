@@ -1,22 +1,18 @@
-
 (function ($) {
   $(function () {
-
-
-    $(window).on('scroll', function () {
+    $(window).on("scroll", function () {
       fnOnScroll();
     });
 
-    $(window).on('resize', function () {
+    $(window).on("resize", function () {
       fnOnResize();
     });
 
-
-    var agTimeline = $('.js-timeline'),
-      agTimelineLine = $('.js-timeline_line'),
-      agTimelineLineProgress = $('.js-timeline_line-progress'),
-      agTimelinePoint = $('.js-timeline-card_point-box'),
-      agTimelineItem = $('.js-timeline_item'),
+    var agTimeline = $(".js-timeline"),
+      agTimelineLine = $(".js-timeline_line"),
+      agTimelineLineProgress = $(".js-timeline_line-progress"),
+      agTimelinePoint = $(".js-timeline-card_point-box"),
+      agTimelineItem = $(".js-timeline_item"),
       agOuterHeight = $(window).outerHeight(),
       agHeight = $(window).height(),
       f = -1,
@@ -39,11 +35,16 @@
       agFlag = false;
 
       agTimelineLine.css({
-        top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
-        bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
+        top:
+          agTimelineItem.first().find(agTimelinePoint).offset().top -
+          agTimelineItem.first().offset().top,
+        bottom:
+          agTimeline.offset().top +
+          agTimeline.outerHeight() -
+          agTimelineItem.last().find(agTimelinePoint).offset().top,
       });
 
-      f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
+      f !== agPosY && ((f = agPosY), agHeight, fnUpdateProgress());
     }
 
     function fnUpdateProgress() {
@@ -58,34 +59,120 @@
       agTimelineItem.each(function () {
         var agTop = $(this).find(agTimelinePoint).offset().top;
 
-        if ((agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight) {
-
-          if ($(this).children().first().children().first().children().first().hasClass("ag-timeline-card_meta")) {
-            $(this).children().first().children().first().children().first().parent().next().children().first().css("border", "3px solid var(--primary)")
-            $(this).children().first().children().first().children().first().css("color", "var(--primary)")
+        if (
+          agTop + agPosY - $(window).scrollTop() <
+          agPosY + 0.5 * agOuterHeight
+        ) {
+          if (
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .hasClass("ag-timeline-card_meta")
+          ) {
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .parent()
+              .next()
+              .children()
+              .first()
+              .css("border", "3px solid var(--primary)");
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .css("color", "var(--primary)");
           } else {
-            $(this).children().first().children().first().children().first().css("border", "3px solid var(--primary)")
-            $(this).children().first().children().first().children().first().parent().next().css("color", "var(--primary)")
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .css("border", "3px solid var(--primary)");
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .parent()
+              .next()
+              .css("color", "var(--primary)");
           }
-          $(this).addClass('js-ag-active')
+          $(this).addClass("js-ag-active");
         } else {
-          if ($(this).children().first().children().first().children().first().hasClass("ag-timeline-card_meta")) {
-            $(this).children().first().children().first().children().first().css("color", "transparent")
-            $(this).children().first().children().first().children().first().parent().next().children().first().css("border", "transparent")
+          if (
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .hasClass("ag-timeline-card_meta")
+          ) {
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .css("color", "transparent");
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .parent()
+              .next()
+              .children()
+              .first()
+              .css("border", "transparent");
           } else {
-            $(this).children().first().children().first().children().first().css("border", "transparent")
-            $(this).children().first().children().first().children().first().parent().next().css("color", "transparent")
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .css("border", "transparent");
+            $(this)
+              .children()
+              .first()
+              .children()
+              .first()
+              .children()
+              .first()
+              .parent()
+              .next()
+              .css("color", "transparent");
           }
-          $(this).removeClass('js-ag-active');
+          $(this).removeClass("js-ag-active");
         }
-      })
+      });
     }
 
     function fnUpdateFrame() {
       agFlag || requestAnimationFrame(fnUpdateWindow);
       agFlag = true;
     }
-
-
   });
 })(jQuery);
