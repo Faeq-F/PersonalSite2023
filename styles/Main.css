@@ -157,8 +157,8 @@ body {
 
 /* Gecko (firefox) based browsers */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) rgb(242, 244, 248);
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--primary) rgb(242, 244, 248) !important;
 }
 
 body:has(.switch__input:checked) *,

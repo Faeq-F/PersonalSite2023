@@ -1,85 +1,83 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site
+title: "Faeq - Software Engineer"
+bio: "A self-taught software developer"
+description: "A self-taught software developer"
+logo: "https://raw.githubusercontent.com/Faeq-F/Faeq-F/gh-pages/_layouts/circle-cropped-profile-image.png"
+locale: en_GB
 
-title: Faeq - Software Engineer
-email: faeqfaisal@hotmail.co.uk
-description: >- # this means to ignore newlines until "baseurl:"
-  A self-taught software developer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://faeq-f.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  faeq-f
+github_username: faeq-f
+github: [metadata]
 
-# Build settings
-logo:               'https://raw.githubusercontent.com/Faeq-F/Faeq-F/gh-pages/_layouts/circle-cropped-profile-image.png'
-locale:             en_GB
-plugins:
-  - jekyll-feed
+baseurl: ""
+url: http://faeq-f.github.io
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 # Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        white
+permalink: /:title/
+markdown: kramdown
+highlighter: white
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
 sass:
-  sass_dir:         _sass
-  style:            compressed
-
-# Comments
-#disqus_shortname:   taylantatli
+  sass_dir: _sass
+  style: compressed
 
 # Social
-# if you don't have any of social below, comment the line.
 #google:
-  #plus:            #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
+#plus:            #username
+#analytics:
+#verify:
+#ad-client:
+#ad-slot:
 #bing-verify:
-email:              faeqfaisal@hotmail.co.uk
-github-url:         faeq-F
-stackoverflow:      13165763/faeq
-linkedin:          faeq
-instagram:          faeq._
+email: faeqfaisal@hotmail.co.uk
+github-url: faeq-F/Quokka
+stackoverflow: 13165763/faeq
+linkedin: faeq
+#xing:              username
+#lastfm:            username
+#tumblr:            username
+#medium:            '@username'
+#pinterest:         username
+#foursquare:        username
+#steam:              username
+#dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
+#soundcloud:        username
+#weibo:             username
+#flickr:            username
 #codepen:           username
+#keybase:           username
+#xmpp:              username@server.com
+#hackernews:        username
 
 # Gems
-gems:
+plugins:
   - jekyll-mentions
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
 
 jekyll-mentions:
-    base_url: https://github.com
+  base_url: https://github.com
 
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+exclude:
+  [
+    README.md,
+    Gemfile,
+    Gemfile.lock,
+    node_modules,
+    gulpfile.js,
+    package.json,
+    _site,
+    src,
+    vendor,
+    CNAME,
+    LICENSE,
+    Rakefile,
+  ]
