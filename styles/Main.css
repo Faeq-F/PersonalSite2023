@@ -42,21 +42,18 @@ body {
   cursor: none;
 }
 
-
 :root {
   --hue: 288;
   --primary: oklch(0.8 0.2 var(--hue));
   --otherColorHue: calc(var(--hue) - 20);
-  --primaryOther: oklch(90% .2 var(--otherColorHue));
-  --primaryOtherOther: oklch(80% .7 var(--otherColorHue));
-  --primary-highlight: oklch(97% .2 var(--hue));
-  --header-bg: oklch(35% .01 200);
+  --primaryOther: oklch(90% 0.2 var(--otherColorHue));
+  --primaryOtherOther: oklch(80% 0.7 var(--otherColorHue));
+  --primary-highlight: oklch(97% 0.2 var(--hue));
+  --header-bg: oklch(35% 0.01 200);
 
   --slider-value: 0;
   --slider-height: 0.375em;
 }
-
-
 
 .cursor {
   width: 50px;
@@ -77,16 +74,16 @@ body {
   height: 20px;
   border-radius: 100%;
   background-color: black;
-  opacity: .3;
+  opacity: 0.3;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
   z-index: 9999999999999999999999999999999999999999999999999;
 }
 
 .hover {
-  background-color: oklch(80% .2 var(--hue) / 0.7);
+  background-color: oklch(80% 0.2 var(--hue) / 0.7);
   opacity: 0.5;
   z-index: 9999999999999999999999999999999999999999999999999;
 }
@@ -94,7 +91,7 @@ body {
 .cursorinnerhover {
   width: 50px;
   height: 50px;
-  opacity: .5;
+  opacity: 0.5;
   z-index: 9999999999999999999999999999999999999999999999999;
 }
 
@@ -133,23 +130,19 @@ body {
   }
 }
 
-
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
-
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-
   box-shadow: inset 0 0 10px 10px transparent;
   border: solid 3px transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-
   border-radius: 360px;
   box-shadow: inset 0 0 10px 10px var(--primary);
   border: solid 2px transparent;
@@ -163,7 +156,7 @@ body {
 
 body:has(.switch__input:checked) *,
 *:has(.switch__input:checked) {
-  scrollbar-color: var(--primary) rgb(13, 11, 7);
+  scrollbar-color: var(--primary) rgb(13, 11, 7) !important;
 }
 
 /*Style for mobile view*/
@@ -181,8 +174,6 @@ body:has(.switch__input:checked) *,
   }
 }
 
-
-
 .card {
   height: 50vh;
   width: 70%;
@@ -194,16 +185,17 @@ body:has(.switch__input:checked) *,
   font-size: 16px;
   color: #2c2c2cd5;
   background-color: #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 
-  -webkit-transition: -webkit-transform .5s, opacity .5s;
-  -moz-transition: -moz-transform .5s, opacity .5s;
-  -o-transition: -o-transform .5s, opacity .5s;
-  transition: transform .5s, opacity .5s;
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 a[href] {
@@ -235,7 +227,6 @@ a[href]:active {
   text-decoration: none;
 }
 
-
 /* Cursor */
 
 #custom-cursor {
@@ -266,18 +257,13 @@ a[href]:active {
   transform: scale(3);
 }
 
-
-
-
-
-
 #themeDiv {
   position: absolute;
   top: 58vh;
   left: 7.5vw;
 }
 
-@media(max-width: 661px) {
+@media (max-width: 661px) {
   #themeDiv {
     top: 75vh;
     left: 10vw;
@@ -293,8 +279,8 @@ a[href]:active {
   --35: #cacaca;
   --6b: #ddd;
   --23: #dcdcdc;
-  --point2: rgba(255, 255, 255, .2);
-  --point5: rgba(255, 255, 255, .5);
+  --point2: rgba(255, 255, 255, 0.2);
+  --point5: rgba(255, 255, 255, 0.5);
   --one: rgba(255, 255, 255, 1);
 }
 
@@ -305,8 +291,8 @@ body:has(.switch__input:checked) {
   --35: #353535;
   --6b: #6b6b6b;
   --23: #232323;
-  --point2: rgba(0, 0, 0, .2);
-  --point5: rgba(0, 0, 0, .5);
+  --point2: rgba(0, 0, 0, 0.2);
+  --point5: rgba(0, 0, 0, 0.5);
   --one: rgba(0, 0, 0, 1);
 }
 
@@ -318,7 +304,9 @@ input[type="checkbox"] {
   background: linear-gradient(0deg, var(--primary), var(--primaryOther));
   outline: none;
   border-radius: 20px;
-  box-shadow: 0 0 0 1px var(--35), 0 0 0 2px var(--3e), inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+  box-shadow: 0 0 0 1px var(--35), 0 0 0 2px var(--3e),
+    inset 0 0 10px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
   margin-top: 2px;
   top: 3px;
 }
@@ -326,11 +314,12 @@ input[type="checkbox"] {
 input:checked[type="checkbox"] {
   background: linear-gradient(0deg, var(--primary), var(--primaryOther));
   box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 3px var(--3e),
-    inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+    inset 0 0 10px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
 }
 
 input[type="checkbox"]:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -339,8 +328,8 @@ input[type="checkbox"]:before {
   background: linear-gradient(0deg, var(--zeros), var(--6b));
   border-radius: 20px;
   box-shadow: 0 0 0 1px var(--23);
-  transform: scale(.98, .96);
-  transition: .5s;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
 }
 
 input:checked[type="checkbox"]:before {
@@ -348,7 +337,7 @@ input:checked[type="checkbox"]:before {
 }
 
 input[type="checkbox"]:after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 1px);
   left: 60px;
@@ -356,7 +345,7 @@ input[type="checkbox"]:after {
   height: 4px;
   background: var(--primary-highlight);
   border-radius: 50%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 input:checked[type="checkbox"]:after {
@@ -365,24 +354,27 @@ input:checked[type="checkbox"]:after {
   box-shadow: 0 0 5px var(--primaryOther), 0 0 15px var(--primaryOther);
 }
 
-
 #themeSlider {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: linear-gradient(0deg, var(--threes), var(--zeros));
   outline: none;
   border-radius: 20px;
-  box-shadow: 0 0 0 1px var(--35), 0 0 0 2px var(--3e), inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+  box-shadow: 0 0 0 1px var(--35), 0 0 0 2px var(--3e),
+    inset 0 0 10px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
   background: linear-gradient(0deg, var(--primary), var(--primaryOther));
   box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
-    inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+    inset 0 0 10px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
   width: 41.5%;
   height: 11.5px;
 }
 
 body:has(.switch__input:checked) #themeDiv #themeSlider {
   box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 3px var(--3e),
-    inset 0 0 10px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+    inset 0 0 10px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
 }
 
 /* Fix styles in gecko (firefox) -based browsers (content not allowed for input) */
@@ -391,9 +383,10 @@ body:has(.switch__input:checked) #themeDiv #themeSlider {
   height: 130%;
   width: 13%;
   background-image: linear-gradient(to bottom, #e4e2e2, #f0f0f2);
-  left: calc(var(--hue)*0.1% + 1px);
+  left: calc(var(--hue) * 0.1% + 1px);
   box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
-    inset 0 0 90px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+    inset 0 0 90px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
 }
 
 #themeSlider::-webkit-slider-thumb {
@@ -401,9 +394,10 @@ body:has(.switch__input:checked) #themeDiv #themeSlider {
   width: 5.6%;
   height: 27%;
   background-image: linear-gradient(to bottom, #e4e2e2, #f0f0f2);
-  left: calc(var(--hue)*0.1% + 1px);
+  left: calc(var(--hue) * 0.1% + 1px);
   box-shadow: 0 0 1px var(--primary), 0 0 0 2px var(--35), 0 0 0 1px var(--3e),
-    inset 0 0 90px var(--one), 0 5px 20px var(--point5), inset 0 0 15px var(--point2);
+    inset 0 0 90px var(--one), 0 5px 20px var(--point5),
+    inset 0 0 15px var(--point2);
 }
 
 body:has(.switch__input:checked) #themeDiv #themeSlider:before {
